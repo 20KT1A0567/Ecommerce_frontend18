@@ -43,7 +43,7 @@ const  Cosmetics1 = () => {
         })
         .catch((error) => {
             console.error("Error adding item to cart:", error);
-            alert("Failed to add item to cart. Please try again.");
+            alert("Failed to add item to cart. Please Login .");
             navigate("/login");
         });
     };

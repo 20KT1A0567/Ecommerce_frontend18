@@ -115,7 +115,7 @@ const UserDashboard = () => {
             },
             {
               to: "/mobiles",
-              src: "https://tse2.mm.bing.net/th?id=OIP.6Ds_8M7uHSxCquMYooNv8wHaEK&pid=Api&P=0&h=180",
+              src: "https://s3.amazonaws.com/images.ecwid.com/images/13261323/808798742.jpg",
               label: "MOBILES",
             },
           ].map((category) => (
