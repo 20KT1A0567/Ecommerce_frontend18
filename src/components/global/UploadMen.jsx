@@ -15,6 +15,10 @@ const uploadMen= () => {
     const [cosmetics, setCosmetics] = useState([]);
     const [errorMessage, setErrorMessage] = useState("");
 
+<<<<<<< HEAD
+=======
+    // Fetch cosmetics data
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
     const fetchCosmetics = async () => {
         try {
             const token = localStorage.getItem("token");
@@ -34,9 +38,17 @@ const uploadMen= () => {
         fetchCosmetics();
     }, []);
 
+<<<<<<< HEAD
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+=======
+    // Handle submit (for posting new cosmetic)
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        // Validation
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
         if (!name || !description || qty <= 0 || price <= 0 || !file) {
             alert("All fields are required, and values must be valid!");
             return;
@@ -77,6 +89,10 @@ const uploadMen= () => {
         }
     };
 
+<<<<<<< HEAD
+=======
+    // Handle delete
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
     const handleDelete = async (id) => {
         const token = localStorage.getItem("token");
         try {
@@ -93,16 +109,28 @@ const uploadMen= () => {
         }
     };
 
+<<<<<<< HEAD
+=======
+    // Open edit modal and set fields with selected cosmetic data
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
     const openEditModal = (cosmetic) => {
         setSelectedCosmetic(cosmetic);
         setName(cosmetic.name);
         setDescription(cosmetic.description);
         setQty(cosmetic.qty);
         setPrice(cosmetic.price);
+<<<<<<< HEAD
         setFile(null);  
         setIsEditModalOpen(true);
     };
 
+=======
+        setFile(null);  // Keep file as null when editing, in case file is not updated
+        setIsEditModalOpen(true);
+    };
+
+    // Handle edit (for updating an existing cosmetic)
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
     const handleEdit = async (e) => {
         e.preventDefault();
 
@@ -140,6 +168,10 @@ const uploadMen= () => {
     };
 
     const openModal = () => {
+<<<<<<< HEAD
+=======
+        // Reset form fields when opening the modal
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
         setName("");
         setDescription("");
         setQty(0);
@@ -148,6 +180,10 @@ const uploadMen= () => {
         setIsModalOpen(true);
     };
     
+<<<<<<< HEAD
+=======
+    // When you open the modal, call openModal() instead of directly setting the state
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
     <button onClick={openModal} className="pop-up-btn">Post</button>
     
 
@@ -155,6 +191,10 @@ const uploadMen= () => {
         <div className="upload-cosmetics-container">
             <button onClick={() => setIsModalOpen(true)} className="pop-up-btn">Post</button>
 
+<<<<<<< HEAD
+=======
+            {/* Modal for creating a new cosmetic */}
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
             {isModalOpen && (
                 <div className="modal-overlay">
                     <div className="modal-content">
@@ -210,6 +250,10 @@ const uploadMen= () => {
                 </div>
             )}
 
+<<<<<<< HEAD
+=======
+            {/* Modal for editing an existing cosmetic */}
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
             {isEditModalOpen && selectedCosmetic && (
                 <div className="modal-overlay">
                     <div className="modal-content">
@@ -265,6 +309,10 @@ const uploadMen= () => {
                 </div>
             )}
 
+<<<<<<< HEAD
+=======
+            {/* Display uploaded cosmetics */}
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
             <div className="cosmetic-table">
                 <h3>Uploaded Men</h3>
                 {errorMessage && <p className="error-message">{errorMessage}</p>}

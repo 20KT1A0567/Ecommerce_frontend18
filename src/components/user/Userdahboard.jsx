@@ -37,6 +37,7 @@ const UserDashboard = () => {
           `http://localhost:9090/user/search?keyword=${query}`
         );
         const searchResults = [];
+<<<<<<< HEAD
         response.data.forEach((entry) => {
   entry.products.forEach((product) => {
     if (
@@ -51,6 +52,18 @@ const UserDashboard = () => {
   });
 });
 
+=======
+        Object.values(response.data).forEach((category) => {
+          category.forEach((product) => {
+            if (
+              product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+              product.description.toLowerCase().includes(searchQuery.toLowerCase())
+            ) {
+              searchResults.push(product);
+            }
+          });
+        });
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
 
         setSearchResults(searchResults);
       } catch (error) {
@@ -115,7 +128,11 @@ const UserDashboard = () => {
             },
             {
               to: "/mobiles",
+<<<<<<< HEAD
               src: "https://s3.amazonaws.com/images.ecwid.com/images/13261323/808798742.jpg",
+=======
+              src: "https://th.bing.com/th?id=OPAC.Jj%2b%2bri0pE%2b3a8g474C474&w=592&h=550&o=5&dpr=1.3&pid=21.1",
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
               label: "MOBILES",
             },
           ].map((category) => (

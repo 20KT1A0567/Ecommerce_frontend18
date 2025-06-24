@@ -84,7 +84,11 @@ const Homepage = () => {
         <div className="products-con"> <Link to="/men1"><img src="https://m.media-amazon.com/images/I/716KHpIWNPL._SX522_.jpg" width={200} height={200} className="products"></img></Link><br></br> <br></br>MEN</div>
         <div className="products-con"> <Link to="/laptops1"><img src="https://p2-ofp.static.pub/fes/cms/2022/09/26/i6zlcap44kafmcywlh54d9rd1wieh1215035.png" width={200} height={200} className="products"></img></Link><br></br><br></br> LAPTOPS</div>
         <div className="products-con"> <Link to="/toys1"><img src="https://th.bing.com/th?id=OPAC.YVFRJlLxQDxjwg474C474&w=406&h=406&o=5&dpr=1.3&pid=21.1" width={200} height={200} className="products"></img></Link><br></br><br></br> TOYS</div>
+<<<<<<< HEAD
         <div className="products-con"> <Link to="/mobiles1"><img src="https://s3.amazonaws.com/images.ecwid.com/images/13261323/808798742.jpg" width={200} height={200} className="products"></img></Link><br></br><br></br> MOBILES </div>
+=======
+        <div className="products-con"> <Link to="/mobiles1"><img src="https://th.bing.com/th?id=OPAC.Jj%2b%2bri0pE%2b3a8g474C474&w=592&h=550&o=5&dpr=1.3&pid=21.1" width={200} height={200} className="products"></img></Link><br></br><br></br> MOBILES </div>
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
       </div>
       <footer class="app-footer">
         <div class="footer-top">

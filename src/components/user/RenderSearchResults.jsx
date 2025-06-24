@@ -26,6 +26,7 @@ const RenderSearchResults = ({ searchQuery, searchResults, loading, cart, setCar
     }
   };
 
+<<<<<<< HEAD
   const handleNavigate = (event, product) => {
     event.preventDefault();
     console.log(product)
@@ -52,6 +53,32 @@ const RenderSearchResults = ({ searchQuery, searchResults, loading, cart, setCar
     } else if (category === "mobiles") {
       navigate(`/mobiledetails`, { state: { item: product } });
     } else {
+=======
+  const handleNavigate = (product) => {
+    const category = product.category.toLowerCase();
+    
+    if (category === "laptops") {
+      navigate("/laptopsdetails", { state: { item: product } });
+    } else if(category === "grocery"){
+      navigate(`/grocerydetails`, { state: { item: product } });
+    }else if(category === "cosmetics"){
+      navigate(`/cosmeticsdetails`, { state: { item: product } });
+    }else if(category === "electronics"){
+      navigate(`/electronicsdetails`, { state: { item: product } });
+    }else if(category === "kids"){
+      navigate(`/kidsdetails`, { state: { item: product } });
+    }else if(category === "men"){
+      navigate(`/mendetails`, { state: { item: product } });
+    }else if(category === "toys"){
+      navigate(`/toysdetails`, { state: { item: product } });
+    }else if(category === "women"){
+      navigate(`/womendetails`, { state: { item: product } });
+    }else if(category === "footwear"){
+      navigate(`/footweardetails`, { state: { item: product } });
+    }else if(category === "mobiles"){
+      navigate(`/mobiledetails`, { state: { item: product } });
+    }else{
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
       navigate('/error')
     }
   };
@@ -76,10 +103,16 @@ const RenderSearchResults = ({ searchQuery, searchResults, loading, cart, setCar
           <p className="price">₹{product.price}</p>
           <button
             className="add-to-cart-button"
+<<<<<<< HEAD
             onClick={(e) => handleNavigate(e, product)}
           >
             Add to Cart
 
+=======
+            onClick={() => handleNavigate(product)} 
+          >
+            Add to Cart
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
           </button>
         </div>
       ))}

@@ -7,6 +7,10 @@ const UserList = () => {
   const [error, setError] = useState("");
   const [selectedRoles, setSelectedRoles] = useState({});
 
+<<<<<<< HEAD
+=======
+  // Fetch users from API
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
   useEffect(() => {
     axios.get("http://localhost:9090/admin/users")
       .then(response => {
@@ -18,6 +22,10 @@ const UserList = () => {
       });
   }, []);
 
+<<<<<<< HEAD
+=======
+  // Update role for a user
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
   const updateUserRole = (id, newRole) => {
     axios.put(`http://localhost:9090/admin/users/${id}/role`, { role: newRole })
       .then(response => {
@@ -58,7 +66,11 @@ const UserList = () => {
               <td>{user.username}</td>
               <td>
                 <select
+<<<<<<< HEAD
                   value={selectedRoles[user.id] || user.role} 
+=======
+                  value={selectedRoles[user.id] || user.role} // Set the selected role from state or user role
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
                   onChange={(e) => handleRoleChange(user.id, e)}
                 >
                   <option value="ROLE_USER">ROLE_USER</option>

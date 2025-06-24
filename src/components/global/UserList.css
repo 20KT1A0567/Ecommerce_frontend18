@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+/* User List Section */
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
 .user-list-container {
     max-width: 1200px;
     margin: 20px auto;
@@ -9,6 +13,10 @@
     font-family: 'Arial', sans-serif;
   }
   
+<<<<<<< HEAD
+=======
+  /* Table Styling */
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
   table {
     width: 100%;
     border-collapse: collapse;
@@ -40,6 +48,10 @@
     background-color: #f1f1f1;
   }
   
+<<<<<<< HEAD
+=======
+  /* Button Styling */
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
   button {
     background-color: #007bff;
     color: white;
@@ -55,6 +67,10 @@
     background-color: #0056b3;
   }
   
+<<<<<<< HEAD
+=======
+  /* Dropdown Menu Styling for Role Selection */
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
   select {
     padding: 8px;
     border-radius: 4px;
@@ -73,12 +89,20 @@
     padding: 8px;
   }
   
+<<<<<<< HEAD
+=======
+  /* Error Message Styling */
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
   .error-message {
     color: red;
     font-size: 16px;
     margin-top: 10px;
   }
   
+<<<<<<< HEAD
+=======
+  /* Responsive Table */
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
   @media (max-width: 768px) {
     table {
       font-size: 14px;

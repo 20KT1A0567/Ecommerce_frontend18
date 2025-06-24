@@ -6,8 +6,11 @@ import { useNavigate } from "react-router-dom";
 import "./cart.css";
 
 const Cart = () => {
+<<<<<<< HEAD
   localStorage.setItem("userName", "Venkat");
 localStorage.setItem("userEmail", "venkat@example.com");
+=======
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
   const [loading, setLoading] = useState(true);
   const { data, setData } = useCartContext();
   const userId = localStorage.getItem("userId");
@@ -17,7 +20,10 @@ localStorage.setItem("userEmail", "venkat@example.com");
 
   const isTestMode = true;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
   const handlePayment = async () => {
     try {
       const orderResponse = await axios.post("http://localhost:9090/createOrder", {
@@ -30,19 +36,32 @@ localStorage.setItem("userEmail", "venkat@example.com");
       const { orderId, order } = orderResponse.data;
       console.log("Order response:", orderResponse.data);
       const options = {
+<<<<<<< HEAD
         key: "rzp_test_fNhXlhgX3Ai8dA",
         amount: calculateTotal() * 100,
         currency: "INR",
         name: "Venkat ecommercesite",
         description: "Test Transaction",
         order_id: order.razorpayOrderId,
+=======
+        key: "rzp_test_H8fYLmO3B3OKIu", 
+        amount: calculateTotal() * 100, 
+        currency: "INR",
+        name: "Venkat ecommercesite",
+        description: "Test Transaction",
+        order_id: order.razorpayOrderId, 
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
         handler: async (response) => {
           try {
             const verifyResponse = await axios.post("http://localhost:9090/paymentCallback", {
               razorpay_order_id: response.razorpay_order_id,
               razorpay_payment_id: response.razorpay_payment_id,
               razorpay_signature: response.razorpay_signature,
+<<<<<<< HEAD
               user_id: userId,
+=======
+              user_id: userId, 
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
             });
 
             console.log("Payment verification response:", verifyResponse.data);
@@ -54,17 +73,29 @@ localStorage.setItem("userEmail", "venkat@example.com");
 
               console.log(data);
               console.log(orderId)
+<<<<<<< HEAD
 
+=======
+             
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
             } else {
               alert("Payment verification failed. Please try again.");
             }
           } catch (error) {
             console.error("Error during payment verification:", error);
+<<<<<<< HEAD
 
           }
         },
         theme: {
           color: "#3399cc",
+=======
+      
+          }
+        },
+        theme: {
+          color: "#3399cc", 
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
         },
       };
       const razorpay = new Razorpay(options);
@@ -88,15 +119,26 @@ localStorage.setItem("userEmail", "venkat@example.com");
       <h3>Items</h3>
       <ul>
         ${data.map((item) => {
+<<<<<<< HEAD
       const product = item.menClothing || item.womenClothing || item.kidsClothing ||
         item.grocery || item.cosmetics || item.footwear || item.electronics ||
         item.laptops || item.mobiles || item.toys;
       return `
+=======
+          const product = item.menClothing || item.womenClothing || item.kidsClothing ||
+            item.grocery || item.cosmetics || item.footwear || item.electronics ||
+            item.laptops || item.mobiles || item.toys;
+          return `
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
             <li>
               <strong>${product?.name}</strong> (₹${product?.price}) x ${item.qty}
             </li>
           `;
+<<<<<<< HEAD
     }).join('')}
+=======
+        }).join('')}
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
       </ul>
       <p><strong>Total Amount:</strong> ₹${orderDetails.amount}</p>
       <p>Thank you for shopping with us!</p>

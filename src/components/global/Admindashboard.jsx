@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
+=======
+import { Link, Outlet } from "react-router-dom";
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
 import "./Admin.css";
 
 const Admindashboard = () => {

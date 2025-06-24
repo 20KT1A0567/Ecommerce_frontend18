@@ -21,7 +21,11 @@ const Displaykidswear = () => {
 
     const handleAddToCart = async () => {
         const userId = localStorage.getItem("userId");
+<<<<<<< HEAD
        
+=======
+
+>>>>>>> 22eeded14a52fadc998509d10f58b7931440ecf9
         if (!userId) {
             alert("Please log in to add items to the cart.");
             return;
